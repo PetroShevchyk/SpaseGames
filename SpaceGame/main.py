@@ -123,4 +123,3 @@ class SpaceGameApp(App):
 if __name__ == '__main__':
     SpaceGameApp().run()
 
-ChatGPT
