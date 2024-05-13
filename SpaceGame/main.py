@@ -83,9 +83,8 @@ class GameWidget(Widget):
         self.player.source = 'explosion.png'
         Clock.unschedule(self.update)
         info_layout = BoxLayout(orientation='vertical', size_hint=(None, None), size=(300, 200), pos=(Window.width / 2 - 150, Window.height / 2 - 100))
-        stars_label = Label(text='Stars collected: ', size_hint=(1, None), height=50)
-        score_label = Label(text='Score: ', size_hint=(1, None), height=50)
-        distance_label = Label(text='You traveled ', size_hint=(1, None), height=50)
+        sstars_label = Label(text=f'Stars collected: {self.player.collected_stars}', size_hint=(1, None), height=50)
+        distance_label = Label(text=f'You traveled: {self.player.distance_traveled} pixels', size_hint=(1, None), height=50)
         btn = Button(text='Play Again', background_color=(0.1, 0.5, 0.8, 1), size_hint=(1, None), height=50)
         btn.bind(on_release=self.restart_game)
         info_layout.add_widget(stars_label)
